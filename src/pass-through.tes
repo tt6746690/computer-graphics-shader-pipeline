@@ -1,0 +1,11 @@
+layout(triangles, equal_spacing, ccw) in;
+in vec4 pos_es_in[];    // attributes of the corners of a patch
+out vec4 pos_fs_in;     // outputs location of current vertex
+// expects: interpolate
+void main()
+{
+  // vec3 gl_TessCoord;
+  pos_fs_in = interpolate(gl_TessCoord, pos_es_in[0], pos_es_in[1], pos_es_in[2]);
+  gl_Position = pos_fs_in;
+}
+
