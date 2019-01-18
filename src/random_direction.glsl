@@ -10,6 +10,13 @@ vec3 random_direction( vec3 seed)
 {
   /////////////////////////////////////////////////////////////////////////////
   // Replace with your code 
-  return normalize(random2(seed));
+
+  vec2 tp = random2(seed);
+
+  // spherical -> cartesian
+  float theta = tp.x * M_PI;
+  float phi   = tp.y * 2 * M_PI;
+
+  return vec3(sin(theta)*cos(phi), sin(theta)*sin(phi), cos(theta));
   /////////////////////////////////////////////////////////////////////////////
 }

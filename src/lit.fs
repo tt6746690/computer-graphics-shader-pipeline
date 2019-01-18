@@ -27,7 +27,7 @@ void main()
   //    the light direction for each vertex `l` is the difference of
   //    light position and vertex position
   vec4 light = vec4(vec3(10,10,10),1);
-  mat4 light_model = inverse(rotate_about_y(mod(animation_seconds, 8.0) * M_PI));
+  mat4 light_model = inverse(rotate_about_y(0.5 * mod(animation_seconds, 4.0) * M_PI));
   light = view * light_model * light;
   vec3 l = normalize(vec3(light - view_pos_fs_in));
 

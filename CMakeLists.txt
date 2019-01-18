@@ -26,6 +26,8 @@ if(USE_SOLUTION)
   add_definitions("-DUSE_SOLUTION")
 endif()
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g")
+
 if(NOT TARGET glfw)
   set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL " " FORCE)
   set(GLFW_BUILD_TESTS OFF CACHE BOOL " " FORCE)

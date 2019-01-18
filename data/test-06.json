@@ -20,6 +20,7 @@
     "../src/smooth_step.glsl",
     "../src/perlin_noise.glsl",
     "../src/blinn_phong.glsl",
+    "../src/rotate_about_y.glsl",
     "../src/procedural_color.fs"
   ]
 }
